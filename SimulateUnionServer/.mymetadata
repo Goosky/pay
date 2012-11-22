@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="SimulateUnionServer"
+  id="myeclipse.1348834977660"
+  context-root="/SimulateUnionServer"
+  j2ee-spec="5.0"
+  archive="SimulateUnionServer.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
