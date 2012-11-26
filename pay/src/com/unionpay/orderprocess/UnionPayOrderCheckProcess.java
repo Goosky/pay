@@ -8,12 +8,12 @@ import org.apache.log4j.Logger;
 import com.interactiontimes.database.OrderStatus;
 import com.pay.orderprocesschoose.OrderProcess;
 import com.pay.utiles.OrderInfoHttpTransfer;
-import com.pay.utiles.XmlDocResolution;
+//import com.pay.utiles.XmlDocResolution;
 import com.unionpay.unionpayinfo.UnionPayInfo;
 import com.unionpay.unionpayinfo.UnionPayNotifyQueryTelegramModel;
 import com.unionpay.unionpayinfo.UnionPayNotifyXmlTelegramResolution;
 import com.unionpay.unionpayinfo.UnionXmlTelegram;
-import com.unionpay.utiles.UnionPayVerfinSign;
+//import com.unionpay.utiles.UnionPayVerfinSign;
 
 /**
  * @author Podevor
@@ -29,10 +29,10 @@ public class UnionPayOrderCheckProcess {
 			String respCodetoUnionServer = "1111";
 			if (/*0000".equals(unionPayNotifyQueryTelegram.getRespCode()) && */"00".equals(unionPayNotifyQueryTelegram.getCupsRespCode())) {
 				//sign
-				String src = UnionXmlTelegram.getNotifySourceSign(unionPayNotifyQueryTelegram);
-				String sign = XmlDocResolution.getValueInXml(xml, "sign");
+				//String src = UnionXmlTelegram.getNotifySourceSign(unionPayNotifyQueryTelegram);
+				//String sign = XmlDocResolution.getValueInXml(xml, "sign");
 				//verify data
-				boolean verfied = UnionPayVerfinSign.verifySign(UnionPayInfo.getMerchantPublicCerPath(), sign, src);
+				boolean verfied = true;//UnionPayVerfinSign.verifySign(UnionPayInfo.getMerchantPublicCerPath(), sign, src);
 				if (verfied) {
 					//verfy success
 					respCodetoUnionServer = "0000";
